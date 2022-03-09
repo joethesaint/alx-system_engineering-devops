@@ -1,0 +1,2 @@
+#!bin/bash[D[D[D[D[D[D[D[D/bin/bash
+sort | uniq -u
