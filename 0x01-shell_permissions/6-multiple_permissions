@@ -1,0 +1,2 @@
+#!/bin/bash
+chmmod 554 hello
