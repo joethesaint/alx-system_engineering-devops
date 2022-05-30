@@ -1,2 +1,2 @@
 #!/bin/bash
-grep ""[Droot" /etc/passwd
+grep "root" /etc/passwd
