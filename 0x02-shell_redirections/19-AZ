@@ -1,2 +1,2 @@
 #!/bin/bash
-tr ""[DAc" ""[DZe"
+tr "A" "Z" | tr "c" "e"
