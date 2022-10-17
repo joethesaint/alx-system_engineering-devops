@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# The script to display "Best School" and print "Hi" if the condition is met
+
+count=0
+while [ $count -lt 10 ]
+do
+    if [ $count -eq 9 ]
+    then
+        echo "Hi"
+    fi
+    echo "Best School"
+    ((count++))
+done
