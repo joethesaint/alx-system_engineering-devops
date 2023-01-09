@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Check if the user passed an argument
+if [ $# -eq 0 ]
+then
+	echo "Error: No argument passed."
+	exit 1
+fi
+
+# Run the whoami command under the specified user
+sudo -u $1 whoami
+

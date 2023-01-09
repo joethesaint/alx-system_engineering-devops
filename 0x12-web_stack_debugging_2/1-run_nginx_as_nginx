@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Change the user that Nginx is running as
+sed -i 's/^user.*/user nginx;/' /etc/nginx/nginx.conf
+
+# Make sure Nginx is listening on all actuve IPs on port 8080
+sed -i 's/^listen.*/listen 0.0.0.0:8080;/' /etc/nginx/nginx.conf
+
+# Restart Nginx to apply the changes
+#sudo systemctl restart nginx
+
