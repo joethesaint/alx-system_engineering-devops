@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-"""Quries the Reddit API and return the number of subscribers for a given subreddit"""
+"""
+Quries the Reddit API and return the number of
+subscribers for a given subreddit
+"""
 import requests
+
 
 def number_of_subsribers(subreddit):
     """returns the total number of subscrubbers for a given subreddit"""
