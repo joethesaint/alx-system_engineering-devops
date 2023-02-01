@@ -6,7 +6,7 @@ subscribers for a given subreddit
 import requests
 
 
-def number_of_subsribers(subreddit):
+def number_of_subscribers(subreddit):
     """returns the total number of subscrubbers for a given subreddit"""
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {
