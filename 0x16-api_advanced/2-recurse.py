@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-Queries the Reddit API and returns a list containing 
+Queries the Reddit API and returns a list containing
 the titles of all hot articles for a given subreddit
 """
-import requests 
+import requests
+
 
 def recurse(subreddit, hot_list=[], after=""):
     """returns a list comtaining the titles of
@@ -16,7 +17,7 @@ def recurse(subreddit, hot_list=[], after=""):
     """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {
-        "User-Agent": "Alx_Advanced API"   
+        "User-Agent": "Alx_Advanced API"
     }
     params = {
         "after": after,
