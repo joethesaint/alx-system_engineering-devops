@@ -17,7 +17,7 @@
 
 ## Root Cause and Resolution:
 
-     The root cause of the issue was a disk space exhaustion on the web server. The website's database had been growing rapidly and consuming a large amount of disk space, leading to the failure of the Apache service. The issue was resolved by adding additional disk space to the server. This allowed the Apache service to start up and the website to become available to users again.
+   * The root cause of the issue was a disk space exhaustion on the web server. The website's database had been growing rapidly and consuming a large amount of disk space, leading to the failure of the Apache service. The issue was resolved by adding additional disk space to the server. This allowed the Apache service to start up and the website to become available to users again.
 
 ## Corrective and Preventative Measures:
    * To prevent similar incidents from occurring in the future, the following measures will be implemented:
