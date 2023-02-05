@@ -15,20 +15,20 @@
    * 2/4/2023, 10:00 PM - The incident was escalated to the senior engineering team for further investigation and resolution.
    * 2/5/2023, 12:00 AM - The issue was resolved by adding additional disk space to the server, allowing the Apache service to start up and the website to become available to users again.
 
-* Root Cause and Resolution:
+## Root Cause and Resolution:
 
-    The root cause of the issue was a disk space exhaustion on the web server. The website's database had been growing rapidly and consuming a large amount of disk space, leading to the failure of the Apache service. The issue was resolved by adding additional disk space to the server. This allowed the Apache service to start up and the website to become available to users again.
+    > The root cause of the issue was a disk space exhaustion on the web server. The website's database had been growing rapidly and consuming a large amount of disk space, leading to the failure of the Apache service. The issue was resolved by adding additional disk space to the server. This allowed the Apache service to start up and the website to become available to users again.
 
-* Corrective and Preventative Measures:
+## Corrective and Preventative Measures:
 
-    To prevent similar incidents from occurring in the future, the following measures will be implemented:
+    * To prevent similar incidents from occurring in the future, the following measures will be implemented:
 
         - Implement a disk utilization monitoring system to alert the team of disk space exhaustion in a timely manner.
         - Implement a database cleanup procedure to remove old and unnecessary data, reducing disk space utilization.
         - Implement a database backup system to avoid data loss in case of a disk failure.
         - Monitor the database growth rate and plan for additional disk space before it becomes a problem.
 
-    Tasks:
+    * Tasks:
 
         - Implement disk utilization monitoring system
         - Implement database cleanup procedure
