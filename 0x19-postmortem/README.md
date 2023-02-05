@@ -1,33 +1,32 @@
-# Critical Outage Postmortem: Web Stack Failure Due to Disk Space Exhaustion
+# 0x19. Postmortem
 
-## Issue Summary:
+## Resources
+[How to write Postmortem](https://sysadmincasts.com/episodes/20-how-to-write-an-incident-report-postmortem)
 
-   * Duration: 2/4/2023, 9:30 PM - 2/5/2023, 12:00 AM (UTC)
-   * Impact: A critical outage in the web stack caused the website to become unavailable for all users, affecting 100% of the user base.
-   * Root Cause: The issue was caused by a disk space exhaustion on the web server, leading to the failure of the Apache service.
+## Requirements
 
-## Timeline:
+* Issue Summary (that is often what executives will read) must contain:
 
-   * 2/4/2023, 9:30 PM - The issue was detected when a monitoring alert was triggered, indicating high disk utilization on the web server.
-   * 2/4/2023, 9:35 PM - The on-call engineer investigated the issue and initially assumed it was due to a spike in traffic.
-   * 2/4/2023, 9:40 PM - The engineer investigated further and noticed that the disk space utilization was rapidly increasing, causing the Apache service to fail.
-   * 2/4/2023, 9:45 PM - The engineer attempted to free up disk space by deleting old log files, but it proved to be insufficient.
-   * 2/4/2023, 10:00 PM - The incident was escalated to the senior engineering team for further investigation and resolution.
-   * 2/5/2023, 12:00 AM - The issue was resolved by adding additional disk space to the server, allowing the Apache service to start up and the website to become available to users again.
+    - duration of the outage with start and end times (including timezone)
+    - what was the impact (what service was down/slow? What were user experiencing? How many % of the users were affected?)
+    - what was the root cause
 
-## Root Cause and Resolution:
+* Timeline (format bullet point, format: time - keep it short, 1 or 2 sentences) must contain:
 
-   * The root cause of the issue was a disk space exhaustion on the web server. The website's database had been growing rapidly and consuming a large amount of disk space, leading to the failure of the Apache service. The issue was resolved by adding additional disk space to the server. This allowed the Apache service to start up and the website to become available to users again.
+    - when was the issue detected
+    - how was the issue detected (monitoring alert, an engineer noticed something, a customer complained…)
+    - actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
+    - misleading investigation/debugging paths that were taken
+    - which team/individuals was the incident escalated to
+    - how the incident was resolved
 
-## Corrective and Preventative Measures:
-   * To prevent similar incidents from occurring in the future, the following measures will be implemented:
-     - Implement a disk utilization monitoring system to alert the team of disk space exhaustion in a timely manner.
-     - Implement a database cleanup procedure to remove old and unnecessary data, reducing disk space utilization.
-     - Implement a database backup system to avoid data loss in case of a disk failure.
-     - Monitor the database growth rate and plan for additional disk space before it becomes a problem.
+* Root cause and resolution must contain:
 
-   * Tasks:
-     - Implement disk utilization monitoring system
-     - Implement database cleanup procedure
-     - Implement database backup system
-     - Monitor database growth rate and plan for additional disk space as needed.
+    - explain in detail what was causing the issue
+    - explain in detail how the issue was fixed
+
+* Corrective and preventative measures must contain:
+
+    - what are the things that can be improved/fixed (broadly speaking)
+    - a list of tasks to address the issue (be very specific, like a TODO, example: patch Nginx server, add monitoring on server memory…)
+    - Be brief and straight to the point, between 400 to 600 words
