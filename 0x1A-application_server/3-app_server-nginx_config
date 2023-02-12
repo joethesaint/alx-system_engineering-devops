@@ -1,0 +1,21 @@
+# Nginx config file for proxying requests to Gunicorn
+
+# Define the HTTP server
+server {
+	# Listen on port 80
+	listen 80;
+
+	# Serve requests for the domain localhost and the public IP
+	server_name localhost 54.237.22.60;
+
+	# Location block for the first Gunicorn process
+	location /airbnb-onepage/ {
+		proxy_pass http://0.0.0.0:5000;
+	}
+
+	# Location block for the second Gunicorn process
+	location /airbnb-dynamic/number_odd_or_even/ {
+		proxy_pass http://0.0.0.0:5001;
+	}
+}
+
